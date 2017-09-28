@@ -118,7 +118,7 @@ public class SeleniumMethods {
 	public void startReport() throws IOException {
 		
 		Calendar cal = Calendar.getInstance();
-		htmlReport = new ExtentHtmlReporter(System.getProperty("user.dir") + "\\src\\test\\java\\tests\\data\\report\\ExtentReport\\TestReport_" + day.format(cal.getTime()) + ".html");
+		htmlReport = new ExtentHtmlReporter(System.getProperty("user.dir") + "\\src\\test\\java\\tests\\data\\report\\ExtentReport\\TestReport.html");
 		extent = new ExtentReports();
 		extent.attachReporter(htmlReport);
 		
