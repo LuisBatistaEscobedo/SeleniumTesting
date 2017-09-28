@@ -43,7 +43,7 @@ public class SeleniumMethods {
 	
 	//Screenshot folder created
 	static Calendar cal = Calendar.getInstance();
-	static File directory = new File(System.getProperty("user.dir") + "//src//test//java//tests//data//report//Screenshots_" + screenday.format(cal.getTime()));
+	static File directory = new File(System.getProperty("user.dir") + "//src//ExtentReport//Screenshots_" + screenday.format(cal.getTime()));
 	static String fileDirectory = directory.toString();
 	
 	public static void loadData() throws IOException{
@@ -59,7 +59,7 @@ public class SeleniumMethods {
 			directory.mkdir();
 		}
 		File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		String path = fileDirectory + "\\" + name + "_" + screenhour.format(LocalDateTime.now()) + ".png";
+		String path = fileDirectory + "//" + name + "_" + screenhour.format(LocalDateTime.now()) + ".png";
         FileUtils.copyFile(scrFile, new File(path));
         test.pass("Screenshot below: ", MediaEntityBuilder.createScreenCaptureFromPath(path).build());
         
@@ -118,7 +118,7 @@ public class SeleniumMethods {
 	public void startReport() throws IOException {
 		
 		Calendar cal = Calendar.getInstance();
-		htmlReport = new ExtentHtmlReporter(System.getProperty("user.dir") + "\\src\\test\\java\\tests\\data\\report\\ExtentReport\\TestReport.html");
+		htmlReport = new ExtentHtmlReporter(System.getProperty("user.dir") + "//src//ExtentReport//TestReport.html");
 		extent = new ExtentReports();
 		extent.attachReporter(htmlReport);
 		
