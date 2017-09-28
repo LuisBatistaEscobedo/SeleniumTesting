@@ -21,7 +21,7 @@ public class ShoppingCart extends SeleniumMethods{
 		test = extent.createTest("Shopping Cart");
 		
 		// Create Webdriver instances
-		System.setProperty("webdriver.chrome.driver", ".\\src\\test\\java\\tests\\data\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", ".//src//test//java//tests//data//chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		WebDriverWait waitForObject = new WebDriverWait(driver, 5);
 		
