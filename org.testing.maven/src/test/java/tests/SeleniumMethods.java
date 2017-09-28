@@ -43,12 +43,12 @@ public class SeleniumMethods {
 	
 	//Screenshot folder created
 	static Calendar cal = Calendar.getInstance();
-	static File directory = new File(System.getProperty("user.dir") + "\\src\\test\\java\\tests\\data\\report\\Screenshots_" + screenday.format(cal.getTime()));
+	static File directory = new File(System.getProperty("user.dir") + "//src//test//java//tests//data//report//Screenshots_" + screenday.format(cal.getTime()));
 	static String fileDirectory = directory.toString();
 	
 	public static void loadData() throws IOException{
 		properties = new Properties();
-		File f = new File(System.getProperty("user.dir")+"\\src\\test\\java\\tests\\data\\data.properties");
+		File f = new File(System.getProperty("user.dir")+"//src//test//java//tests//data//data.properties");
 		FileReader obj = new FileReader(f);
 		properties.load(obj);
 	}
