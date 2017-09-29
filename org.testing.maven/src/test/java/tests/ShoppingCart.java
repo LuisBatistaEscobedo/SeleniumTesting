@@ -29,7 +29,7 @@ public class ShoppingCart extends SeleniumMethods{
 		
 		
 		// Create Webdriver instances
-		System.setProperty("webdriver.chrome.driver", "//tools//jenkins//data//workspace//Git-ContinuousTesting//chromedriver");
+		//System.setProperty("webdriver.chrome.driver", "//tools//jenkins//data//workspace//Git-ContinuousTesting//chromedriver");
 		WebDriver driver = new ChromeDriver(options);
 		WebDriverWait waitForObject = new WebDriverWait(driver, 5);
 		
