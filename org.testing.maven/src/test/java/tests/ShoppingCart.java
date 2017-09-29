@@ -2,6 +2,7 @@ package tests;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -10,6 +11,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
+
+import java.io.File;
 import java.io.IOException;
 
 public class ShoppingCart extends SeleniumMethods{
@@ -20,9 +23,14 @@ public class ShoppingCart extends SeleniumMethods{
 		// Create Test for report
 		test = extent.createTest("Shopping Cart");
 		
+		// Setting Chromedriver binary directory
+		ChromeOptions options = new ChromeOptions();
+		options.setBinary(new File("/usr/bin/chromium-browser"));
+		
+		
 		// Create Webdriver instances
 		System.setProperty("webdriver.chrome.driver", "//tools//jenkins//data//workspace//Git-ContinuousTesting//chromedriver");
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver(options);
 		WebDriverWait waitForObject = new WebDriverWait(driver, 5);
 		
 		// Get partial URL and construct complete URL
