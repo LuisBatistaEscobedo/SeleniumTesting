@@ -18,7 +18,7 @@
        <scope>test</scope>
 </dependency>
  
-<!-- Adding Selenium dependency Testing POM -->
+<!-- Adding Selenium dependency -->
 <dependency>
 <groupId>org.seleniumhq.selenium</groupId>
 <artifactId>selenium-java</artifactId>
