@@ -27,8 +27,6 @@ public class ShoppingCart extends SeleniumMethods{
 		ChromeOptions options = new ChromeOptions();
 		options.setBinary(new File("/usr/lib64/chromium-browser/chromedriver"));
 		
-		//madafaker
-		
 		// Create Webdriver instances
 		//System.setProperty("webdriver.chrome.driver", "//tools//jenkins//data//workspace//Git-ContinuousTesting//chromedriver");
 		WebDriver driver = new ChromeDriver(options);
