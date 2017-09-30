@@ -24,7 +24,7 @@ public class ShoppingCart extends SeleniumMethods{
 		test = extent.createTest("Shopping Cart");
 		
 		// Setting Chromedriver binary directory
-		//ChromeOptions options = new ChromeOptions();
+		ChromeOptions options = new ChromeOptions();
 		options.setBinary(new File("/usr/lib64/chromium-browser/chromedriver"));
 		
 		
