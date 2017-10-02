@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.net.InetAddress;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-//import java.time.LocalDateTime;
+import java.time.LocalDateTime;
 //import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Properties;
@@ -35,7 +35,7 @@ public class SeleniumMethods {
 	public static DateFormat screenday = new SimpleDateFormat("yyyyMMdd");
 	//private static DateTimeFormatter screenhour = DateTimeFormatter.ofPattern("HHmmss");
 
-	// Report elements created
+	// Report elements  created
 	static Properties properties;
 	static ExtentHtmlReporter htmlReport;
 	static ExtentReports extent;
