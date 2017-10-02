@@ -3,9 +3,19 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="org.testing.maven.org.testing.maven.App"/>
-      <class name="tests.SeleniumMethods"/>
       <class name="tests.ShoppingCart"/>
     </classes>
   </test> <!-- Default test -->
+  <test name="Default test(failed)">
+    <classes>
+      <class name="tests.ShoppingCart">
+        <methods>
+          <include name="startReport"/>
+          <include name="tearDown"/>
+          <include name="shoppingCartTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- tests.ShoppingCart -->
+    </classes>
+  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
