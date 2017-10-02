@@ -3,6 +3,7 @@ package tests;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -23,17 +24,17 @@ public class ShoppingCart extends SeleniumMethods{
 		test = extent.createTest("Shopping Cart");
 		
 		// Setting Chromedriver binary directory
-		ChromeOptions options = new ChromeOptions();
-		options.setBinary(new File(".\\src\\test\\java\\tests\\data\\chromedriver.exe"));
+		//ChromeOptions options = new ChromeOptions();
+		//options.setBinary(new File(".\\src\\test\\java\\tests\\data\\chromedriver.exe"));
 		
 		
 		// Create Webdriver instances
-		System.setProperty("webdriver.chrome.driver","C:\\chrome\\chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver","C:\\chrome\\chromedriver.exe");
 		//DesiredCapabilities cap = DesiredCapabilities.chrome();
 		//cap.setPlatform(Platform.WINDOWS);
 		//cap.setBrowserName("chrome");
 		//WebDriver driver = new RemoteWebDriver(new URL("http://192.168.1.67:7777/wd/hub"), cap);
-		WebDriver driver = new ChromeDriver(options);
+		WebDriver driver = new FirefoxDriver();
 		//driver.manage().deleteAllCookies();
 		WebDriverWait waitForObject = new WebDriverWait(driver, 5);
 		
