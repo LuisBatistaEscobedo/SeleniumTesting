@@ -1,9 +1,9 @@
 package tests;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -11,7 +11,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
-import java.net.URL;
+import java.io.File;
 import java.io.IOException;
 
 public class ShoppingCart extends SeleniumMethods{
@@ -23,17 +23,18 @@ public class ShoppingCart extends SeleniumMethods{
 		test = extent.createTest("Shopping Cart");
 		
 		// Setting Chromedriver binary directory
-		//ChromeOptions options = new ChromeOptions();
-		//options.setBinary(new File("/usr/lib64/chromium-browser/chromedriver"));
+		ChromeOptions options = new ChromeOptions();
+		options.setBinary(new File("C://chrome//chromedriver.exe"));
 		
 		
 		// Create Webdriver instances
 		//System.setProperty("webdriver.chrome.driver","C:\\chrome\\chromedriver.exe");
-		DesiredCapabilities cap = DesiredCapabilities.chrome();
-		cap.setPlatform(Platform.WINDOWS);
-		cap.setBrowserName("chrome");
-		WebDriver driver = new RemoteWebDriver(new URL("http://192.168.1.67:7777/wd/hub"), cap);
-		driver.manage().deleteAllCookies();
+		//DesiredCapabilities cap = DesiredCapabilities.chrome();
+		//cap.setPlatform(Platform.WINDOWS);
+		//cap.setBrowserName("chrome");
+		//WebDriver driver = new RemoteWebDriver(new URL("http://192.168.1.67:7777/wd/hub"), cap);
+		WebDriver driver = new ChromeDriver(options);
+		//driver.manage().deleteAllCookies();
 		WebDriverWait waitForObject = new WebDriverWait(driver, 5);
 		
 		// Get partial URL and construct complete URL
