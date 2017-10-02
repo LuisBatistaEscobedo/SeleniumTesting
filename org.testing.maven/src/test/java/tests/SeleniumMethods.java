@@ -61,7 +61,7 @@ public class SeleniumMethods {
 		}
 		File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		//String path = fileDirectory + "//" + name + "_" + screenhour.format(LocalDateTime.now()) + ".png";
-		String path = fileDirectory + "//" + name + ".png";
+		String path = fileDirectory + "\\" + name + ".png";
         FileUtils.copyFile(scrFile, new File(path));
         test.pass("Screenshot below: ", MediaEntityBuilder.createScreenCaptureFromPath(path).build());
         
