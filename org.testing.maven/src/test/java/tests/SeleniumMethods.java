@@ -43,7 +43,8 @@ public class SeleniumMethods {
 	
 	//Screenshot folder created
 	static Calendar cal = Calendar.getInstance();
-	static File directory = new File(System.getProperty("user.dir") + "//src//ExtentReport//Screenshots_" + screenday.format(cal.getTime()));
+	//static File directory = new File(System.getProperty("user.dir") + "//src//ExtentReport//Screenshots" + screenday.format(cal.getTime()));
+	static File directory = new File(System.getProperty("user.dir") + "//src//ExtentReport//Screenshots");
 	static String fileDirectory = directory.toString();
 	
 	public static void loadData() throws IOException{
@@ -59,7 +60,8 @@ public class SeleniumMethods {
 			directory.mkdir();
 		}
 		File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		String path = fileDirectory + "//" + name + "_" + screenhour.format(LocalDateTime.now()) + ".png";
+		//String path = fileDirectory + "//" + name + "_" + screenhour.format(LocalDateTime.now()) + ".png";
+		String path = fileDirectory + "//" + name + ".png";
         FileUtils.copyFile(scrFile, new File(path));
         test.pass("Screenshot below: ", MediaEntityBuilder.createScreenCaptureFromPath(path).build());
         
