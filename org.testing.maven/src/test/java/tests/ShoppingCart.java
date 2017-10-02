@@ -32,7 +32,7 @@ public class ShoppingCart extends SeleniumMethods{
 		DesiredCapabilities cap = DesiredCapabilities.chrome();
 		cap.setPlatform(Platform.WINDOWS);
 		cap.setBrowserName("chrome");
-		WebDriver driver = new RemoteWebDriver(new URL("http://192.168.1.64:7777/wd/hub"), cap);
+		WebDriver driver = new RemoteWebDriver(new URL("http://192.168.1.67:7777/wd/hub"), cap);
 		driver.manage().deleteAllCookies();
 		WebDriverWait waitForObject = new WebDriverWait(driver, 5);
 		
