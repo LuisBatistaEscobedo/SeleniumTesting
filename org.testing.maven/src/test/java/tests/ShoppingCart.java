@@ -28,7 +28,7 @@ public class ShoppingCart extends SeleniumMethods{
 		
 		
 		// Create Webdriver instances
-		System.setProperty("webdriver.chrome.driver","C://chrome//chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","C:\\chrome\\chromedriver.exe");
 		//DesiredCapabilities cap = DesiredCapabilities.chrome();
 		//cap.setPlatform(Platform.WINDOWS);
 		//cap.setBrowserName("chrome");
