@@ -23,8 +23,8 @@ public class ShoppingCart extends SeleniumMethods{
 		test = extent.createTest("Shopping Cart");
 		
 		// Setting Chromedriver binary directory
-		//ChromeOptions options = new ChromeOptions();
-		//options.setBinary(new File("C://chrome//chromedriver.exe"));
+		ChromeOptions options = new ChromeOptions();
+		options.setBinary(new File("org.testing.maven\\src\\test\\java\\tests\\data\\chromedriver.exe"));
 		
 		
 		// Create Webdriver instances
@@ -33,7 +33,7 @@ public class ShoppingCart extends SeleniumMethods{
 		//cap.setPlatform(Platform.WINDOWS);
 		//cap.setBrowserName("chrome");
 		//WebDriver driver = new RemoteWebDriver(new URL("http://192.168.1.67:7777/wd/hub"), cap);
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver(options);
 		//driver.manage().deleteAllCookies();
 		WebDriverWait waitForObject = new WebDriverWait(driver, 5);
 		
