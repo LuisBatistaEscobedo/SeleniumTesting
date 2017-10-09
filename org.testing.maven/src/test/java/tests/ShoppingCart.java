@@ -161,7 +161,7 @@ public class ShoppingCart extends SeleniumMethods{
         driver.findElement(By.xpath("//section[contains(@class, 'payment_form')]/div/form/div/div/div/input[@id='securityCode']")).sendKeys(code);
 
         // Terms and Conditions
-        driver.findElement(By.xpath("//*[@id='checkout_step_1']/div[1]/section[contains(@class,'terms-conditions')]/div[contains(@class,'tcs')]/label/div/input[contains(@type,'checkbox')]")).click();
+        driver.findElement(By.xpath("//section[@id='checkout_step_1']/div[contains(@class,'col-md)]/section[contains(@class,'terms-conditions')]/div[contains(@class,'tcs')]/label/div[contains(@style,'table-cell')]/input[contains(@class,'touched')]")).click();
         test.info(MarkupHelper.createLabel("Information added to order.", ExtentColor.GREEN));
         
         // Review Order button
