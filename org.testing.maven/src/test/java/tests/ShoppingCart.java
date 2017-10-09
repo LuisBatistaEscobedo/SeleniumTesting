@@ -73,7 +73,7 @@ public class ShoppingCart extends SeleniumMethods{
 		SeleniumMethods.waitingTime(5);
 		
 		// Click on checkbox element
-        WebElement checkboxElement = driver.findElement(By.xpath("//section[contains(@class,'phonewall')]/div[2]/div[2]/div[2]/div[1]/div[contains(@class,'panel-collapse')]/div[contains(@class,'panel-body')]/div[contains(@class,'ng-scope')]/form/label[2]/input"));
+        WebElement checkboxElement = driver.findElement(By.xpath("//section[contains(@class,'phonewall')]/div[2]/div[2]/div[2]/div[1]/div[contains(@class,'panel-collapse')]/div[contains(@class,'panel-body')]/div[contains(@class,'ng-scope')]/form/label[2]"));
         checkboxElement.click();        
         SeleniumMethods.waitingTime(5);
         
