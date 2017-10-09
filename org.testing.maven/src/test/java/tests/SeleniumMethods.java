@@ -33,6 +33,7 @@ public class SeleniumMethods {
 	
 	public static DateFormat day = new SimpleDateFormat("yyyy-MM-dd");
 	public static DateFormat screenday = new SimpleDateFormat("yyyyMMdd");
+	
 	//private static DateTimeFormatter screenhour = DateTimeFormatter.ofPattern("HHmmss");
 
 	// Report elements  created

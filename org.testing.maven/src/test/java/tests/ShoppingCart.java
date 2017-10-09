@@ -1,9 +1,9 @@
 package tests;
 
+import org.jasypt.util.text.BasicTextEncryptor;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -22,6 +22,11 @@ public class ShoppingCart extends SeleniumMethods{
 		
 		// Create Test for report
 		test = extent.createTest("Shopping Cart");
+		
+		BasicTextEncryptor cryp = new BasicTextEncryptor();
+		
+		// Encryption password
+		cryp.setPassword("asd");
 		
 		// Setting Chromedriver binary directory
 		//ChromeOptions options = new ChromeOptions();
