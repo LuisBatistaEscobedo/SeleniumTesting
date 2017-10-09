@@ -70,6 +70,7 @@ public class ShoppingCart extends SeleniumMethods{
 		WebElement phoneFilter = driver.findElement(By.xpath("//div[contains(@class, 'panel-default')]//a[contains(text(), 'Types')]"));
 		phoneFilterExecutor.executeScript("arguments[0].click();", phoneFilter);
 		test.info(MarkupHelper.createLabel("iPhone filter set.", ExtentColor.GREEN));
+		SeleniumMethods.waitingTime(5);
 		
 		// Click on checkbox element
         WebElement checkboxElement = driver.findElement(By.xpath("//section[contains(@class,'phonewall')]/div[2]/div[2]/div[2]/div[1]/div[contains(@class,'panel-collapse')]/div[contains(@class,'panel-body')]/div[contains(@class,'ng-scope')]/form/label[2]/input"));
