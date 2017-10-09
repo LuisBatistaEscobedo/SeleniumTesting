@@ -163,7 +163,8 @@ public class ShoppingCart extends SeleniumMethods{
         SeleniumMethods.waitingTime(5);
 
         // Terms and Conditions
-        driver.findElement(By.xpath(".//*[@id='checkout_step_1']/div[1]/section[5]/div/label/div[1]/input")).click();
+        WebElement terms = driver.findElement(By.xpath("//section[contains(@class,'terms')]/div/label/div[contains(@ng-show,'appName')]"));
+        terms.click();
         test.info(MarkupHelper.createLabel("Information added to order.", ExtentColor.GREEN));
         
         // Review Order button
