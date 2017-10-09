@@ -30,7 +30,6 @@ public class ShoppingCart extends SeleniumMethods{
 		//ChromeOptions options = new ChromeOptions();
 		//options.setBinary("C:\\Users\\jose.batista\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe");
 		
-		
 		// Create Webdriver instances
 		System.setProperty("webdriver.chrome.driver",".\\src\\test\\java\\tests\\data\\chromedriver.exe");
 		//DesiredCapabilities cap = DesiredCapabilities.chrome();
@@ -141,6 +140,10 @@ public class ShoppingCart extends SeleniumMethods{
         // Card Type
         driver.findElement(By.xpath("//section[contains(@class, 'payment_form')]/div/form/div/div/div/label/input[contains(@value,'VISA')]")).click();
 
+        // Security Code
+        String code = getData("Code");
+        driver.findElement(By.xpath("//section[contains(@class, 'payment_form')]/div/form/div/div/div/input[@id='securityCode']")).sendKeys(code);
+        
         // Card Number
         String backText = getData("Card");
         String card = cryp.decrypt(backText);
@@ -156,12 +159,10 @@ public class ShoppingCart extends SeleniumMethods{
         String year = getData("Year");
         select04.selectByVisibleText(year);
 
-        // Security Code
-        String code = getData("Code");
-        driver.findElement(By.xpath("//section[contains(@class, 'payment_form')]/div/form/div/div/div/input[@id='securityCode']")).sendKeys(code);
+        SeleniumMethods.waitingTime(5);
 
         // Terms and Conditions
-        driver.findElement(By.xpath("//section[@id='checkout_step_1']/div[contains(@class,'col-md)]/section[contains(@class,'terms-conditions')]/div[contains(@class,'tcs')]/label/div[contains(@style,'table-cell')]/input[contains(@class,'touched')]")).click();
+        driver.findElement(By.xpath(".//*[@id='checkout_step_1']/div[1]/section[5]/div/label/div[1]/input")).click();
         test.info(MarkupHelper.createLabel("Information added to order.", ExtentColor.GREEN));
         
         // Review Order button
