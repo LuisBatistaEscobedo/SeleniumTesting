@@ -22,21 +22,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/extentreports3/extentreports-3.0.7.jar"/>
-	<classpathentry kind="lib" path="C:/extentreports3/lib/bsh-2.0b4.jar"/>
-	<classpathentry kind="lib" path="C:/extentreports3/lib/bson-3.3.0.jar"/>
-	<classpathentry kind="lib" path="C:/extentreports3/lib/commons-codec-1.9.jar"/>
-	<classpathentry kind="lib" path="C:/extentreports3/lib/commons-logging-1.2.jar"/>
-	<classpathentry kind="lib" path="C:/extentreports3/lib/freemarker-2.3.23.jar"/>
-	<classpathentry kind="lib" path="C:/extentreports3/lib/gson-2.8.0.jar"/>
-	<classpathentry kind="lib" path="C:/extentreports3/lib/httpclient-4.5.2.jar"/>
-	<classpathentry kind="lib" path="C:/extentreports3/lib/httpcore-4.4.4.jar"/>
-	<classpathentry kind="lib" path="C:/extentreports3/lib/httpmime-4.5.2.jar"/>
-	<classpathentry kind="lib" path="C:/extentreports3/lib/jcommander-1.48.jar"/>
-	<classpathentry kind="lib" path="C:/extentreports3/lib/jsoup-1.9.2.jar"/>
-	<classpathentry kind="lib" path="C:/extentreports3/lib/mongodb-driver-3.3.0.jar"/>
-	<classpathentry kind="lib" path="C:/extentreports3/lib/mongodb-driver-core-3.3.0.jar"/>
-	<classpathentry kind="lib" path="C:/extentreports3/lib/testng-6.9.10.jar"/>
 	<classpathentry kind="lib" path="C:/jasypt-1.9.2/lib/icu4j-3.4.4.jar"/>
 	<classpathentry kind="lib" path="C:/jasypt-1.9.2/lib/jasypt-1.9.2.jar"/>
 	<classpathentry kind="lib" path="C:/jasypt-1.9.2/lib/jasypt-1.9.2-javadoc.jar"/>

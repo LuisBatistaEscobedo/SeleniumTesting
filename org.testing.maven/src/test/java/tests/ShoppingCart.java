@@ -3,7 +3,6 @@ package tests;
 import org.jasypt.util.text.BasicTextEncryptor;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -12,7 +11,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
-import java.io.File;
 import java.io.IOException;
 
 public class ShoppingCart extends SeleniumMethods{
@@ -144,7 +142,8 @@ public class ShoppingCart extends SeleniumMethods{
         driver.findElement(By.xpath("//section[contains(@class, 'payment_form')]/div/form/div/div/div/label/input[contains(@value,'VISA')]")).click();
 
         // Card Number
-        String card = getData("Card");
+        String backText = getData("Card");
+        String card = cryp.decrypt(backText);
         driver.findElement(By.xpath("//section[contains(@class, 'payment_form')]/div/form/div/div/div/input[@id='cardNumber']")).sendKeys(card);
         
         // Select month

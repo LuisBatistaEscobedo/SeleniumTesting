@@ -26,6 +26,12 @@
 </dependency>
 
 <dependency>
+    <groupId>org.jasypt</groupId>
+    <artifactId>jasypt</artifactId>
+    <version>1.9.0</version>
+</dependency>
+
+<dependency>
     <groupId>com.aventstack</groupId>
     <artifactId>extentreports</artifactId>
     <version>3.0.7</version>
