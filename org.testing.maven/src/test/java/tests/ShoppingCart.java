@@ -73,9 +73,8 @@ public class ShoppingCart extends SeleniumMethods{
 		SeleniumMethods.waitingTime(5);
 		
 		// Click on checkbox element
-        WebElement checkboxElement = driver.findElement(By.xpath("//section[contains(@class,'phonewall')]/div[2]/div[2]/div[2]/div[1]/div[contains(@class,'panel-collapse')]/div[contains(@class,'panel-body')]/div[contains(@class,'ng-scope')]/form/label[2]"));
-        checkboxElement.click();        
-        SeleniumMethods.waitingTime(5);
+        WebElement checkboxElement = driver.findElement(By.xpath("//section[contains(@class,'phonewall')]/div[2]/div[2]/div[2]/div[1]/div[contains(@class,'panel-collapse')]/div[contains(@class,'panel-body')]/div[contains(@class,'ng-scope')]/form/label[2]/span"));
+        checkboxElement.click();   
         
         // Price comparison
         String price01 = driver.findElement(By.xpath("//section[contains(@class,'phonewall')]/div[contains(@id,'phoneListArea')]/div[3]/div[1]/div[4]/div[contains(@class,'prices')]/h2")).getText();
@@ -159,8 +158,7 @@ public class ShoppingCart extends SeleniumMethods{
         Select select04 = new Select(driver.findElement(By.xpath("//section[contains(@class, 'payment_form')]/div/form/div/div/div/select[contains(@class,'expireYearSelect')]")));
         String year = getData("Year");
         select04.selectByVisibleText(year);
-
-        SeleniumMethods.waitingTime(5);
+		SeleniumMethods.waitingTime(5);
 
         // Terms and Conditions
         WebElement terms = driver.findElement(By.xpath("//section[contains(@class,'terms')]/div/label/div[contains(@ng-show,'appName')]"));
