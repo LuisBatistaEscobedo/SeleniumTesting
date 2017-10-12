@@ -39,6 +39,9 @@ public class ShoppingCart extends SeleniumMethods{
 		driver.manage().deleteAllCookies();
 		WebDriverWait waitForObject = new WebDriverWait(driver, 5);
 		
+		//Scroll
+		JavascriptExecutor scroll = (JavascriptExecutor)driver;
+		
 		// Get partial URL and construct complete URL
 		String url = getData("Url");
 		String completeUrl = "https://" + url;
@@ -64,6 +67,7 @@ public class ShoppingCart extends SeleniumMethods{
 		Select select01 = new Select(driver.findElement(By.xpath("//div[contains(@class, 'dropdown pull-left')]//select[contains(@class, 'sortby')]")));
 		select01.selectByVisibleText("Price: Low to High");
 		test.info(MarkupHelper.createLabel("Filter changed for 'Price: Low to High'.", ExtentColor.GREEN));
+		scroll.executeScript("window.scrollTo(0, 250)");
 		
 		// iPhone Filter
 		JavascriptExecutor phoneFilterExecutor = (JavascriptExecutor)driver;
@@ -164,6 +168,7 @@ public class ShoppingCart extends SeleniumMethods{
         WebElement terms = driver.findElement(By.xpath("//section[contains(@class,'terms')]/div/label/div[contains(@ng-show,'appName')]"));
         terms.click();
         test.info(MarkupHelper.createLabel("Information added to order.", ExtentColor.GREEN));
+        scroll.executeScript("window.scrollTo(0, document.body.scrollHeight)");
         
         // Review Order button
         driver.findElement(By.xpath("//section[@id='checkout_step_1']/div[1]/section[contains(@class,'summary')]/div[contains(@class,'finalamount')]/ul/a[contains(@class,'btn')]")).click();

@@ -92,6 +92,18 @@ public class SeleniumMethods {
         }
     }
 	
+	public static void carouselData(String name, String price)
+	{
+		if(name != null && price != null) {
+			
+			test.info(MarkupHelper.createLabel("First phone on the carousel: " + name + " and price: " + price, ExtentColor.GREEN));
+		}
+		else {
+			test.info(MarkupHelper.createLabel("Error: Carousel is not visible.", ExtentColor.RED));
+			Assert.assertTrue(false, "Test Failed.");
+		}
+	}
+	
 	public static void compareToZero(String value)
     {
         if (Integer.parseInt(value) == 0)
@@ -104,18 +116,6 @@ public class SeleniumMethods {
         	test.info(MarkupHelper.createLabel("Number of items on the cart: " + value , ExtentColor.GREEN));
         }
     }
-	
-	public static void carouselData(String name, String price)
-	{
-		if(name != null && price != null) {
-			
-			test.info(MarkupHelper.createLabel("First phone on the carousel: " + name + " and price: " + price, ExtentColor.GREEN));
-		}
-		else {
-			test.info(MarkupHelper.createLabel("Error: Carousel is not visible.", ExtentColor.RED));
-			Assert.assertTrue(false, "Test Failed.");
-		}
-	}
 	
 	@BeforeTest
 	public void startReport() throws IOException {
